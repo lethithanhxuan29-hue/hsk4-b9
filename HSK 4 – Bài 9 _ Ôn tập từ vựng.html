@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057)file:///C:/Users/Administrator/Downloads/hsk4-bai9_2.html -->
+<html lang="vi"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HSK 4 – Bài 9 | Ôn tập từ vựng</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --ink:     #0F172A;
+  --deep:    #1E3A5F;
+  --blue:    #2563EB;
+  --sky:     #38BDF8;
+  --amber:   #F59E0B;
+  --rose:    #F43F5E;
+  --green:   #10B981;
+  --lavender:#7C3AED;
+  --bg:      #F0F4FF;
+  --card:    #FFFFFF;
+  --muted:   #64748B;
+  --border:  #E2E8F0;
+  --radius:  16px;
+  --shadow:  0 2px 20px rgba(15,23,42,.08);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Inter', 'Noto Sans SC', sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  min-height: 100vh;
+}
+
+/* ── HEADER ── */
+header {
+  background: var(--deep);
+  color: #fff;
+  padding: 32px 20px 26px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+header::after {
+  content: '努力';
+  position: absolute; bottom: -24px; right: 10px;
+  font-family: 'Noto Sans SC', serif;
+  font-size: 120px; font-weight: 900;
+  opacity: .06; color: #fff; pointer-events: none; line-height: 1;
+}
+.header-top {
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  margin-bottom: 10px;
+}
+.hsk-badge {
+  background: var(--amber); color: var(--ink);
+  font-size: .7rem; font-weight: 800; letter-spacing: .1em;
+  padding: 4px 12px; border-radius: 99px; text-transform: uppercase;
+}
+.level-pill {
+  background: rgba(255,255,255,.15);
+  color: #fff; font-size: .7rem; font-weight: 700; letter-spacing: .08em;
+  padding: 4px 12px; border-radius: 99px;
+}
+header h1 {
+  font-size: clamp(1.35rem, 4vw, 2rem);
+  font-weight: 800; letter-spacing: -.01em; line-height: 1.2;
+}
+header p { font-size: .85rem; opacity: .75; margin-top: 6px; }
+.header-stats {
+  display: flex; justify-content: center; gap: 20px; margin-top: 18px;
+}
+.hstat {
+  text-align: center;
+}
+.hstat-num { font-size: 1.5rem; font-weight: 800; color: var(--sky); }
+.hstat-lbl { font-size: .68rem; opacity: .65; text-transform: uppercase; letter-spacing: .07em; }
+
+/* ── TABS ── */
+.tabs {
+  display: flex;
+  background: var(--ink);
+  overflow-x: auto; scrollbar-width: none;
+}
+.tabs::-webkit-scrollbar { display: none; }
+.tab-btn {
+  flex: 1; min-width: 80px; padding: 14px 8px;
+  background: none; border: none; cursor: pointer;
+  color: rgba(255,255,255,.5);
+  font-size: .78rem; font-weight: 700;
+  letter-spacing: .04em; transition: all .2s;
+  position: relative; white-space: nowrap;
+}
+.tab-btn.active { color: #fff; }
+.tab-btn.active::after {
+  content: '';
+  position: absolute; bottom: 0; left: 20%; right: 20%;
+  height: 3px; background: var(--sky); border-radius: 3px 3px 0 0;
+}
+
+/* ── MAIN ── */
+main { max-width: 900px; margin: 0 auto; padding: 24px 14px 70px; }
+.section { display: none; }
+.section.active { display: block; }
+
+/* ── VOCAB GRID ── */
+.section-title {
+  font-size: .72rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: .1em; color: var(--muted);
+  margin-bottom: 14px; padding-left: 2px;
+}
+.vocab-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
+}
+.vocab-card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 16px 14px 14px;
+  box-shadow: var(--shadow);
+  border-top: 3px solid var(--blue);
+  animation: rise .35s ease both;
+  cursor: default;
+  transition: transform .18s, box-shadow .18s;
+}
+.vocab-card:nth-child(3n+1) { border-top-color: var(--blue); }
+.vocab-card:nth-child(3n+2) { border-top-color: var(--lavender); }
+.vocab-card:nth-child(3n)   { border-top-color: var(--amber); }
+.vocab-card:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(15,23,42,.12); }
+
+@keyframes rise {
+  from { opacity:0; transform:translateY(12px); }
+  to   { opacity:1; transform:translateY(0); }
+}
+.vc-hanzi  { font-family:'Noto Sans SC',serif; font-size:1.9rem; font-weight:700; color:var(--deep); line-height:1.1; }
+.vc-pinyin { font-size:.78rem; color:var(--blue); font-weight:600; margin-top:3px; letter-spacing:.02em; }
+.vc-vi     { font-size:.85rem; color:var(--ink); font-weight:500; margin-top:5px; }
+.vc-pos    {
+  display:inline-block; font-size:.62rem; font-weight:700;
+  padding:1px 7px; border-radius:99px; margin-top:6px;
+  text-transform:uppercase; letter-spacing:.06em;
+}
+.pos-n  { background:#EFF6FF; color:#1D4ED8; }
+.pos-v  { background:#F0FDF4; color:#15803D; }
+.pos-adj{ background:#FEF3C7; color:#92400E; }
+.pos-adv{ background:#FAF5FF; color:#7E22CE; }
+.pos-m  { background:#FFF1F2; color:#9F1239; }
+.pos-conj{ background:#F0FDFA; color:#0F766E; }
+.vc-ex  {
+  margin-top:10px; padding-top:10px;
+  border-top:1px dashed var(--border);
+  font-size:.78rem; color:var(--muted); line-height:1.55;
+}
+.vc-ex .zh { font-family:'Noto Sans SC',sans-serif; color:var(--deep); font-weight:500; font-size:.82rem; }
+
+/* search */
+.search-wrap { margin-bottom:18px; position:relative; }
+.search-input {
+  width:100%; padding:11px 16px 11px 40px;
+  border:2px solid var(--border); border-radius:99px;
+  font-size:.9rem; font-family:inherit; outline:none;
+  transition:border-color .15s; background:#fff;
+}
+.search-input:focus { border-color:var(--blue); }
+.search-icon { position:absolute; left:14px; top:50%; transform:translateY(-50%); font-size:.95rem; pointer-events:none; }
+
+/* ── QUIZ ── */
+.quiz-topbar {
+  display:flex; align-items:center; gap:10px;
+  margin-bottom:18px; flex-wrap:wrap;
+}
+.timer-box {
+  display:flex; align-items:center; gap:6px;
+  background:var(--deep); color:#fff;
+  border-radius:99px; padding:8px 18px;
+  font-size:.92rem; font-weight:800; font-variant-numeric:tabular-nums;
+  min-width:100px;
+}
+.timer-box.warn { background:var(--rose); animation:blink .7s infinite; }
+@keyframes blink { 0%,100%{opacity:1}50%{opacity:.65} }
+
+.prog-wrap { flex:1; min-width:140px; }
+.prog-lbl  { font-size:.72rem; color:var(--muted); margin-bottom:5px; }
+.prog-track{ height:7px; background:var(--border); border-radius:99px; overflow:hidden; }
+.prog-fill { height:100%; background:linear-gradient(90deg,var(--blue),var(--sky)); border-radius:99px; transition:width .4s ease; }
+
+.live-score {
+  background:var(--amber); color:var(--ink);
+  border-radius:99px; padding:8px 18px;
+  font-size:.85rem; font-weight:800;
+}
+
+/* question card */
+.qcard {
+  background:var(--card); border-radius:var(--radius);
+  padding:22px 20px; margin-bottom:14px;
+  box-shadow:var(--shadow);
+  animation:rise .28s ease both;
+}
+.q-meta { display:flex; align-items:center; gap:8px; margin-bottom:10px; }
+.q-num  { font-size:.7rem; font-weight:800; color:var(--muted); text-transform:uppercase; letter-spacing:.08em; }
+.q-tag  {
+  font-size:.65rem; font-weight:800; text-transform:uppercase;
+  letter-spacing:.06em; padding:2px 9px; border-radius:99px;
+}
+.tg-mc    { background:#DBEAFE; color:#1E40AF; }
+.tg-fill  { background:#FCE7F3; color:#9D174D; }
+.tg-trans { background:#FEF3C7; color:#92400E; }
+
+.q-body {
+  font-size:1rem; font-weight:600; line-height:1.55; margin-bottom:16px;
+  font-family:'Noto Sans SC','Inter',sans-serif;
+}
+
+/* options */
+.opts { display:grid; gap:9px; }
+.opt {
+  width:100%; text-align:left;
+  padding:11px 15px; border-radius:10px;
+  border:2px solid var(--border); background:#fff;
+  cursor:pointer; font-size:.88rem; font-family:'Noto Sans SC','Inter',sans-serif;
+  transition:border-color .13s, background .13s; line-height:1.4;
+}
+.opt:hover:not(:disabled) { border-color:var(--blue); background:#EFF6FF; }
+.opt.correct { border-color:var(--green)!important; background:#F0FDF4!important; color:#065F46; font-weight:600; }
+.opt.wrong   { border-color:var(--rose)!important;  background:#FFF1F2!important; color:#9F1239; }
+.opt.reveal  { border-color:var(--green)!important; background:#D1FAE5!important; }
+
+/* fill */
+.fill-inp {
+  width:100%; padding:11px 14px;
+  border:2px solid var(--border); border-radius:10px;
+  font-size:.95rem; font-family:'Noto Sans SC','Inter',sans-serif;
+  outline:none; transition:border-color .15s; background:#fff;
+}
+.fill-inp:focus { border-color:var(--blue); }
+.fill-inp.correct { border-color:var(--green); background:#F0FDF4; }
+.fill-inp.wrong   { border-color:var(--rose);  background:#FFF1F2; }
+.fill-hint { font-size:.73rem; color:var(--muted); margin-bottom:7px; }
+
+/* feedback */
+.fb {
+  margin-top:10px; padding:9px 13px;
+  border-radius:8px; font-size:.83rem; line-height:1.45; display:none;
+}
+.fb.ok  { background:#F0FDF4; color:#065F46; border-left:3px solid var(--green); display:block; }
+.fb.err { background:#FFF1F2; color:#9F1239; border-left:3px solid var(--rose);  display:block; }
+
+/* actions */
+.quiz-actions { display:flex; gap:10px; margin-top:24px; flex-wrap:wrap; }
+.btn {
+  padding:12px 26px; border-radius:99px; border:none; cursor:pointer;
+  font-size:.88rem; font-weight:700; font-family:inherit;
+  transition:opacity .15s, transform .1s;
+}
+.btn:hover { opacity:.88; }
+.btn:active { transform:scale(.97); }
+.btn-p { background:linear-gradient(135deg,var(--blue),var(--deep)); color:#fff; }
+.btn-s { background:var(--amber); color:var(--ink); }
+.btn-g { background:var(--border); color:var(--ink); }
+
+/* start screen */
+.start-screen {
+  text-align:center; padding:50px 20px;
+  background:var(--card); border-radius:var(--radius); box-shadow:var(--shadow);
+}
+.start-icon { font-size:3.5rem; }
+.start-screen h2 { font-size:1.35rem; font-weight:800; margin:14px 0 8px; }
+.start-screen p  { color:var(--muted); margin-bottom:28px; line-height:1.6; }
+.quiz-types {
+  display:flex; flex-wrap:wrap; gap:8px; justify-content:center; margin-bottom:28px;
+}
+.qt-chip {
+  font-size:.75rem; font-weight:600; padding:5px 13px; border-radius:99px;
+  background:var(--bg); color:var(--deep); border:1px solid var(--border);
+}
+
+/* result */
+.result-wrap {
+  background:var(--card); border-radius:var(--radius); padding:36px 22px;
+  box-shadow:var(--shadow); text-align:center;
+}
+.res-icon  { font-size:4rem; }
+.res-score { font-size:3.2rem; font-weight:900; color:var(--blue); margin:12px 0 4px; }
+.res-msg   { color:var(--muted); font-size:.95rem; }
+.res-bar   { max-width:280px; margin:18px auto; }
+.res-grid  {
+  display:grid; grid-template-columns:1fr 1fr 1fr;
+  gap:10px; max-width:320px; margin:20px auto;
+}
+.res-stat  { text-align:center; }
+.rs-num    { font-size:1.4rem; font-weight:800; }
+.rs-lbl    { font-size:.7rem; color:var(--muted); text-transform:uppercase; letter-spacing:.06em; }
+.rs-c { color:var(--green); }
+.rs-w { color:var(--rose); }
+.rs-p { color:var(--blue); }
+
+.review-section { margin-top:26px; text-align:left; }
+.review-section h3 { font-size:.9rem; font-weight:800; margin-bottom:12px; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); }
+.rv-item {
+  padding:11px 14px; border-radius:10px; margin-bottom:8px;
+  font-size:.82rem; line-height:1.5; border-left:3px solid;
+}
+.rv-item.ok  { background:#F0FDF4; border-color:var(--green); }
+.rv-item.bad { background:#FFF1F2; border-color:var(--rose); }
+.rv-q { font-weight:600; margin-bottom:3px; font-family:'Noto Sans SC',sans-serif; }
+.rv-a { color:var(--muted); }
+.rv-c { color:#065F46; font-weight:700; }
+
+/* responsive */
+@media(max-width:500px){
+  .vocab-grid { grid-template-columns:1fr 1fr; }
+  .header-stats { gap:12px; }
+  .res-grid { grid-template-columns:1fr 1fr 1fr; }
+  .quiz-actions { flex-direction:column; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-top">
+    <span class="hsk-badge">HSK 4</span>
+    <span class="level-pill">Bài 9 · Kiên trì &amp; Thành công</span>
+  </div>
+  <h1>🎓 Ôn tập từ vựng tiếng Trung</h1>
+  <p>Chủ đề: nỗ lực, thể thao, kết quả và quá trình</p>
+  <div class="header-stats">
+    <div class="hstat"><div class="hstat-num">32</div><div class="hstat-lbl">Từ vựng</div></div>
+    <div class="hstat"><div class="hstat-num">20</div><div class="hstat-lbl">Câu hỏi</div></div>
+    <div class="hstat"><div class="hstat-num">15'</div><div class="hstat-lbl">Thời gian</div></div>
+  </div>
+</header>
+
+<nav class="tabs">
+  <button class="tab-btn active" onclick="switchTab(&#39;vocab&#39;,this)">📖 Từ vựng</button>
+  <button class="tab-btn" onclick="switchTab(&#39;quiz&#39;,this)">✏️ Luyện tập</button>
+</nav>
+
+<main>
+  <!-- VOCAB -->
+  <div id="vocab" class="section active">
+    <div class="search-wrap">
+      <span class="search-icon">🔍</span>
+      <input class="search-input" id="searchInput" placeholder="Tìm từ vựng…" oninput="filterVocab(this.value)">
+    </div>
+    <div class="section-title" id="vocabCount">32 từ vựng</div>
+    <div class="vocab-grid" id="vocabGrid">
+    <div class="vocab-card" style="animation-delay:0s">
+      <div class="vc-hanzi">饼干</div>
+      <div class="vc-pinyin">bǐnggān</div>
+      <div class="vc-vi">🇻🇳 bánh quy</div>
+      <span class="vc-pos pos-n">Danh từ</span>
+      <div class="vc-ex">
+        <div class="zh">💬 她喜欢吃饼干。</div>
+        <div style="margin-top:3px">Cô ấy thích ăn bánh quy.</div>
+      </div>
+    </div>
+  
+    <div class="vocab-card" style="animation-delay:0.03s">
+      <div class="vc-hanzi">难道</div>
+      <div class="vc-pinyin">nándào</div>
+      <div class="vc-vi">🇻🇳 chẳng lẽ, lẽ nào</div>
+      <span class="vc-pos pos-adv">Phó từ</span>
+      <div class="vc-ex">
+        <div class="zh">💬 难道你不知道吗？</div>
+        <div style="margin-top:3px">Chẳng lẽ bạn không biết sao?</div>
+      </div>
+    </div>
+  
+    <div class="vocab-card" style="animation-delay:0.06s">
+      <div class="vc-hanzi">得</div>
+      <div class="vc-pinyin">de/dé/děi</div>
+      <div class="vc-vi">🇻🇳 (bổ ngữ kết quả / phải)</div>
+      <span class="vc-pos pos-v">Động từ</span>
+      <div class="vc-ex">
+        <div class="zh">💬 他跑得很快。</div>
+        <div style="margin-top:3px">Anh ấy chạy rất nhanh.</div>
+      </div>
+    </div>
+  
+    <div class="vocab-card" style="animation-delay:0.09s">
+      <div class="vc-hanzi">坚持</div>
+      <div class="vc-pinyin">jiānchí</div>
+      <div class="vc-vi">🇻🇳 kiên trì, duy trì</div>
+      <span class="vc-pos pos-v">Động từ</span>
+      <div class="vc-ex">
+        <div class="zh">💬 学习要坚持每天练习。</div>
+        <div style="margin-top:3px">Học tập cần kiên trì luyện tập mỗi ngày.</div>
+      </div>
+    </div>
+  
+    <div class="vocab-card" style="animation-delay:0.12s">
+      <div class="vc-hanzi">放弃</div>
+      <div class="vc-pinyin">fàngqì</div>
+      <div class="vc-vi">🇻🇳 từ bỏ, bỏ cuộc</div>
+      <span class="vc-pos pos-v">Động từ</span>
+      <div class="vc-ex">
+        <div class="zh">💬 不要放弃你的梦想。</div>
+        <div style="margin-top:3px">Đừng từ bỏ ước mơ của bạn.</div>
+      </div>
+    </div>
+  
+    <div class="vocab-card" style="animation-delay:0.15s">
+      <div class="vc-hanzi">主意</div>
+      <div class="vc-pinyin">zhǔyi</div>
+      <div class="vc-vi">🇻🇳 ý kiến, chủ ý</div>
+      <span class="vc-pos pos-n">Danh từ</span>
+      <div class="vc-ex">
+        <div class="zh">💬 这是个好主意！</div>
+        <div style="margin-top:3px">Đây là ý kiến hay!</div>
+      </div>
+    </div>
+  
+    <div class="vocab-card" style="animation-delay:0.18s">
+      <div class="vc-hanzi">网球</div>
+      <div class="vc-pinyin">wǎngqiú</div>
+      <div class="vc-vi">🇻🇳 quần vợt (tennis)</div>
+      <span class="vc-pos pos-n">Danh từ</span>
+      <div class="vc-ex">
+        <div class="zh">💬 他每周末打网球。</div>
+        <div style="margin-top:3px">Anh ấy chơi tennis mỗi cuối tuần.</div>
+      </div>
+    </div>
+  
+    <div class="vocab-card" style="animation-delay:0.21s">
+      <div class="vc-hanzi">国际</div>
+      <div class="vc-pinyin">guójì</div>
+      <div class="vc-vi">🇻🇳 quốc tế</div>
+      <span class="vc-pos pos-adj">Tính từ</span>
+      <div class="vc-ex">
+        <div class="zh">💬 这是一场国际比赛。</div>
+        <div style="margin-top:3px">Đây là một cuộc thi quốc tế.</div>
+      </div>
+    </div>
+  
+    <div class="vocab-card" style="animation-delay:0.24s">
+      <div class="vc-hanzi">轻松</div>
+      <div class="vc-pinyin">qīngsōng</div>
+      <div class="vc-vi">🇻🇳 thoải mái, nhẹ nhàng</div>
+      <span class="vc-pos pos-adj">Tính từ</span>
+      <div class="vc-ex">
+        <div class="zh">💬 周末我想做些轻松的事。</div>
+        <div style="margin-top:3px">Cuối tuần tôi muốn làm gì đó thư thái.</div>
+      </div>
+    </div>
+  
+    <div class="vocab-card" style="animation-delay:0.27s">
+      <div class="vc-hanzi">赢</div>
+      <div class="vc-pinyin">yíng</div>
+      <div class="vc-vi">🇻🇳 thắng, chiến thắng</div>
+      <span class="vc-pos pos-v">Động từ</span>
+      <div class="vc-ex">
+        <div class="zh">💬 我们队赢了比赛！</div>
+        <div style="margin-top:3px">Đội chúng tôi đã thắng trận đấu!</div>
+      </div>
+    </div>
+  
+    <div class="vocab-card" style="animation-delay:0.3s">
+      <div class="vc-hanzi">随便</div>
+      <div class="vc-pinyin">suíbiàn</div>
+      <div class="vc-vi">🇻🇳 tùy ý, thoải mái</div>
+      <span class="vc-pos pos-adv">Phó từ</span>
+      <div class="vc-ex">
+        <div class="zh">💬 随便你，我都可以。</div>
+        <div style="margin-top:3px">Tùy bạn thôi, tôi đều được.</div>
+      </div>
+    </div>
+  
+    <div class="vocab-card" style="animation-delay:0.32999999999999996s">
+      <div class="vc-hanzi">汗</div>
+      <div class="vc-pinyin">hàn</div>
+      <div class="vc-vi">🇻🇳 mồ hôi</div>
+      <span class="vc-pos pos-n">Danh từ</span>
+      <div class="vc-ex">
+        <div class="zh">💬 运动后他全身是汗。</div>
+        <div style="margin-top:3px">Sau khi tập luyện anh ấy đổ mồ hôi khắp người.</div>
+      </div>
+    </div>
+  
+    <div class="vocab-card" style="animation-delay:0.36s">
+      <div class="vc-hanzi">通过</div>
+      <div class="vc-pinyin">tōngguò</div>
+      <div class="vc-vi">🇻🇳 thông qua, vượt qua</div>
+      <span class="vc-pos pos-v">Động từ</span>
+      <div class="vc-ex">
+        <div class="zh">💬 他通过了HSK四级考试。</div>
+        <div style="margin-top:3px">Anh ấy đã vượt qua kỳ thi HSK cấp 4.</div>
+      </div>
+    </div>
+  
+    <div class="vocab-card" style="animation-delay:0.39s">
+      <div class="vc-hanzi">篇</div>
+      <div class="vc-pinyin">piān</div>
+      <div class="vc-vi">🇻🇳 bài (lượng từ bài văn)</div>
+      <span class="vc-pos pos-m">Lượng từ</span>
+      <div class="vc-ex">
+        <div class="zh">💬 他写了一篇文章。</div>
+        <div style="margin-top:3px">Anh ấy viết một bài văn.</div>
+      </div>
+    </div>
+  
+    <div class="vocab-card" style="animation-delay:0.42s">
+      <div class="vc-hanzi">作家</div>
+      <div class="vc-pinyin">zuòjiā</div>
+      <div class="vc-vi">🇻🇳 nhà văn</div>
+      <span class="vc-pos pos-n">Danh từ</span>
+      <div class="vc-ex">
+        <div class="zh">💬 她是一位著名的作家。</div>
+        <div style="margin-top:3px">Cô ấy là một nhà văn nổi tiếng.</div>
+      </div>
+    </div>
+  
+    <div class="vocab-card" style="animation-delay:0.44999999999999996s">
+      <div class="vc-hanzi">当时</div>
+      <div class="vc-pinyin">dāngshí</div>
+      <div class="vc-vi">🇻🇳 lúc đó, hồi đó</div>
+      <span class="vc-pos pos-n">Danh từ</span>
+      <div class="vc-ex">
+        <div class="zh">💬 当时我们都很年轻。</div>
+        <div style="margin-top:3px">Hồi đó chúng tôi đều còn rất trẻ.</div>
+      </div>
+    </div>
+  
+    <div class="vocab-card" style="animation-delay:0.48s">
+      <div class="vc-hanzi">可是</div>
+      <div class="vc-pinyin">kěshì</div>
+      <div class="vc-vi">🇻🇳 nhưng, tuy nhiên</div>
+      <span class="vc-pos pos-conj">Liên từ</span>
+      <div class="vc-ex">
+        <div class="zh">💬 我想去，可是没有时间。</div>
+        <div style="margin-top:3px">Tôi muốn đi nhưng không có thời gian.</div>
+      </div>
+    </div>
+  
+    <div class="vocab-card" style="animation-delay:0.51s">
+      <div class="vc-hanzi">正确</div>
+      <div class="vc-pinyin">zhèngquè</div>
+      <div class="vc-vi">🇻🇳 chính xác, đúng đắn</div>
+      <span class="vc-pos pos-adj">Tính từ</span>
+      <div class="vc-ex">
+        <div class="zh">💬 你的答案是正确的。</div>
+        <div style="margin-top:3px">Câu trả lời của bạn là chính xác.</div>
+      </div>
+    </div>
+  
+    <div class="vocab-card" style="animation-delay:0.54s">
+      <div class="vc-hanzi">理想</div>
+      <div class="vc-pinyin">lǐxiǎng</div>
+      <div class="vc-vi">🇻🇳 lý tưởng, ước mơ</div>
+      <span class="vc-pos pos-n">Danh từ</span>
+      <div class="vc-ex">
+        <div class="zh">💬 我的理想是成为医生。</div>
+        <div style="margin-top:3px">Lý tưởng của tôi là trở thành bác sĩ.</div>
+      </div>
+    </div>
+  
+    <div class="vocab-card" style="animation-delay:0.57s">
+      <div class="vc-hanzi">勇敢</div>
+      <div class="vc-pinyin">yǒnggǎn</div>
+      <div class="vc-vi">🇻🇳 dũng cảm</div>
+      <span class="vc-pos pos-adj">Tính từ</span>
+      <div class="vc-ex">
+        <div class="zh">💬 她非常勇敢地面对困难。</div>
+        <div style="margin-top:3px">Cô ấy rất dũng cảm đối mặt với khó khăn.</div>
+      </div>
+    </div>
+  
+    <div class="vocab-card" style="animation-delay:0.6s">
+      <div class="vc-hanzi">结果</div>
+      <div class="vc-pinyin">jiéguǒ</div>
+      <div class="vc-vi">🇻🇳 kết quả</div>
+      <span class="vc-pos pos-n">Danh từ</span>
+      <div class="vc-ex">
+        <div class="zh">💬 考试结果出来了。</div>
+        <div style="margin-top:3px">Kết quả thi đã ra rồi.</div>
+      </div>
+    </div>
+  
+    <div class="vocab-card" style="animation-delay:0.63s">
+      <div class="vc-hanzi">失败</div>
+      <div class="vc-pinyin">shībài</div>
+      <div class="vc-vi">🇻🇳 thất bại</div>
+      <span class="vc-pos pos-v">Động từ</span>
+      <div class="vc-ex">
+        <div class="zh">💬 失败是成功之母。</div>
+        <div style="margin-top:3px">Thất bại là mẹ của thành công.</div>
+      </div>
+    </div>
+  
+    <div class="vocab-card" style="animation-delay:0.6599999999999999s">
+      <div class="vc-hanzi">过程</div>
+      <div class="vc-pinyin">guòchéng</div>
+      <div class="vc-vi">🇻🇳 quá trình</div>
+      <span class="vc-pos pos-n">Danh từ</span>
+      <div class="vc-ex">
+        <div class="zh">💬 学习的过程很重要。</div>
+        <div style="margin-top:3px">Quá trình học tập rất quan trọng.</div>
+      </div>
+    </div>
+  
+    <div class="vocab-card" style="animation-delay:0.69s">
+      <div class="vc-hanzi">至少</div>
+      <div class="vc-pinyin">zhìshǎo</div>
+      <div class="vc-vi">🇻🇳 ít nhất</div>
+      <span class="vc-pos pos-adv">Phó từ</span>
+      <div class="vc-ex">
+        <div class="zh">💬 你至少要喝八杯水。</div>
+        <div style="margin-top:3px">Bạn cần uống ít nhất tám ly nước.</div>
+      </div>
+    </div>
+  
+    <div class="vocab-card" style="animation-delay:0.72s">
+      <div class="vc-hanzi">总结</div>
+      <div class="vc-pinyin">zǒngjié</div>
+      <div class="vc-vi">🇻🇳 tổng kết, tóm tắt</div>
+      <span class="vc-pos pos-v">Động từ</span>
+      <div class="vc-ex">
+        <div class="zh">💬 老师总结了今天的内容。</div>
+        <div style="margin-top:3px">Giáo viên đã tổng kết nội dung hôm nay.</div>
+      </div>
+    </div>
+  
+    <div class="vocab-card" style="animation-delay:0.75s">
+      <div class="vc-hanzi">取</div>
+      <div class="vc-pinyin">qǔ</div>
+      <div class="vc-vi">🇻🇳 lấy, lấy về</div>
+      <span class="vc-pos pos-v">Động từ</span>
+      <div class="vc-ex">
+        <div class="zh">💬 我去取快递。</div>
+        <div style="margin-top:3px">Tôi đi lấy hàng chuyển phát.</div>
+      </div>
+    </div>
+  
+    <div class="vocab-card" style="animation-delay:0.78s">
+      <div class="vc-hanzi">经历</div>
+      <div class="vc-pinyin">jīnglì</div>
+      <div class="vc-vi">🇻🇳 kinh nghiệm, trải nghiệm</div>
+      <span class="vc-pos pos-n">Danh từ</span>
+      <div class="vc-ex">
+        <div class="zh">💬 这段经历让我成长很多。</div>
+        <div style="margin-top:3px">Trải nghiệm này giúp tôi trưởng thành nhiều.</div>
+      </div>
+    </div>
+  
+    <div class="vocab-card" style="animation-delay:0.8099999999999999s">
+      <div class="vc-hanzi">许多</div>
+      <div class="vc-pinyin">xǔduō</div>
+      <div class="vc-vi">🇻🇳 rất nhiều</div>
+      <span class="vc-pos pos-adj">Tính từ</span>
+      <div class="vc-ex">
+        <div class="zh">💬 他有许多朋友。</div>
+        <div style="margin-top:3px">Anh ấy có rất nhiều bạn bè.</div>
+      </div>
+    </div>
+  
+    <div class="vocab-card" style="animation-delay:0.84s">
+      <div class="vc-hanzi">区别</div>
+      <div class="vc-pinyin">qūbié</div>
+      <div class="vc-vi">🇻🇳 sự khác biệt</div>
+      <span class="vc-pos pos-n">Danh từ</span>
+      <div class="vc-ex">
+        <div class="zh">💬 这两个词有什么区别？</div>
+        <div style="margin-top:3px">Hai từ này có sự khác biệt gì?</div>
+      </div>
+    </div>
+  
+    <div class="vocab-card" style="animation-delay:0.87s">
+      <div class="vc-hanzi">暂时</div>
+      <div class="vc-pinyin">zànshí</div>
+      <div class="vc-vi">🇻🇳 tạm thời</div>
+      <span class="vc-pos pos-adv">Phó từ</span>
+      <div class="vc-ex">
+        <div class="zh">💬 这只是暂时的困难。</div>
+        <div style="margin-top:3px">Đây chỉ là khó khăn tạm thời.</div>
+      </div>
+    </div>
+  
+    <div class="vocab-card" style="animation-delay:0.8999999999999999s">
+      <div class="vc-hanzi">面对</div>
+      <div class="vc-pinyin">miànduì</div>
+      <div class="vc-vi">🇻🇳 đối mặt với</div>
+      <span class="vc-pos pos-v">Động từ</span>
+      <div class="vc-ex">
+        <div class="zh">💬 我们要勇敢面对挑战。</div>
+        <div style="margin-top:3px">Chúng ta phải dũng cảm đối mặt với thách thức.</div>
+      </div>
+    </div>
+  
+    <div class="vocab-card" style="animation-delay:0.9299999999999999s">
+      <div class="vc-hanzi">经过</div>
+      <div class="vc-pinyin">jīngguò</div>
+      <div class="vc-vi">🇻🇳 trải qua, đi qua</div>
+      <span class="vc-pos pos-v">Động từ</span>
+      <div class="vc-ex">
+        <div class="zh">💬 经过努力，他终于成功了。</div>
+        <div style="margin-top:3px">Sau khi nỗ lực, cuối cùng anh ấy đã thành công.</div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- QUIZ -->
+  <div id="quiz" class="section">
+    <div id="quizStart">
+      <div class="start-screen">
+        <div class="start-icon">🏆</div>
+        <h2>Sẵn sàng chinh phục HSK 4?</h2>
+        <p>20 câu hỏi được tạo ngẫu nhiên từ 32 từ vựng<br>Thời gian: 15 phút</p>
+        <div class="quiz-types">
+          <span class="qt-chip">🔤 Trắc nghiệm</span>
+          <span class="qt-chip">✍️ Điền từ</span>
+          <span class="qt-chip">🇻🇳→🇨🇳 Dịch Việt-Trung</span>
+          <span class="qt-chip">🇨🇳→🇻🇳 Dịch Trung-Việt</span>
+          <span class="qt-chip">📝 Chọn nghĩa đúng</span>
+        </div>
+        <button class="btn btn-p" onclick="startQuiz()">Bắt đầu ngay →</button>
+      </div>
+    </div>
+
+    <div id="quizMain" style="display:none">
+      <div class="quiz-topbar">
+        <div class="timer-box" id="timerBox">⏱ <span id="timerTxt">15:00</span></div>
+        <div class="prog-wrap">
+          <div class="prog-lbl" id="progLbl">Câu 0 / 20</div>
+          <div class="prog-track"><div class="prog-fill" id="progFill" style="width:0%"></div></div>
+        </div>
+        <div class="live-score">⭐ <span id="liveScore">0</span>/20</div>
+      </div>
+      <div id="qContainer"></div>
+      <div class="quiz-actions">
+        <button class="btn btn-p" onclick="submitQuiz()">Nộp bài 📨</button>
+        <button class="btn btn-g" onclick="if(confirm(&#39;Làm lại từ đầu?&#39;))startQuiz()">🔄 Làm lại</button>
+      </div>
+    </div>
+
+    <div id="quizResult" style="display:none"></div>
+  </div>
+</main>
+
+<script>
+/* ══════════════════════════════════════════
+   VOCABULARY DATA
+══════════════════════════════════════════ */
+const VOCAB = [
+  { hanzi:'饼干',   pinyin:'bǐnggān',    vi:'bánh quy',        pos:'n',
+    ex:'她喜欢吃饼干。', exVi:'Cô ấy thích ăn bánh quy.' },
+  { hanzi:'难道',   pinyin:'nándào',     vi:'chẳng lẽ, lẽ nào',pos:'adv',
+    ex:'难道你不知道吗？', exVi:'Chẳng lẽ bạn không biết sao?' },
+  { hanzi:'得',     pinyin:'de/dé/děi',  vi:'(bổ ngữ kết quả / phải)',pos:'v',
+    ex:'他跑得很快。', exVi:'Anh ấy chạy rất nhanh.' },
+  { hanzi:'坚持',   pinyin:'jiānchí',    vi:'kiên trì, duy trì', pos:'v',
+    ex:'学习要坚持每天练习。', exVi:'Học tập cần kiên trì luyện tập mỗi ngày.' },
+  { hanzi:'放弃',   pinyin:'fàngqì',     vi:'từ bỏ, bỏ cuộc',   pos:'v',
+    ex:'不要放弃你的梦想。', exVi:'Đừng từ bỏ ước mơ của bạn.' },
+  { hanzi:'主意',   pinyin:'zhǔyi',      vi:'ý kiến, chủ ý',    pos:'n',
+    ex:'这是个好主意！', exVi:'Đây là ý kiến hay!' },
+  { hanzi:'网球',   pinyin:'wǎngqiú',    vi:'quần vợt (tennis)',pos:'n',
+    ex:'他每周末打网球。', exVi:'Anh ấy chơi tennis mỗi cuối tuần.' },
+  { hanzi:'国际',   pinyin:'guójì',      vi:'quốc tế',           pos:'adj',
+    ex:'这是一场国际比赛。', exVi:'Đây là một cuộc thi quốc tế.' },
+  { hanzi:'轻松',   pinyin:'qīngsōng',   vi:'thoải mái, nhẹ nhàng',pos:'adj',
+    ex:'周末我想做些轻松的事。', exVi:'Cuối tuần tôi muốn làm gì đó thư thái.' },
+  { hanzi:'赢',     pinyin:'yíng',       vi:'thắng, chiến thắng',pos:'v',
+    ex:'我们队赢了比赛！', exVi:'Đội chúng tôi đã thắng trận đấu!' },
+  { hanzi:'随便',   pinyin:'suíbiàn',    vi:'tùy ý, thoải mái', pos:'adv',
+    ex:'随便你，我都可以。', exVi:'Tùy bạn thôi, tôi đều được.' },
+  { hanzi:'汗',     pinyin:'hàn',        vi:'mồ hôi',            pos:'n',
+    ex:'运动后他全身是汗。', exVi:'Sau khi tập luyện anh ấy đổ mồ hôi khắp người.' },
+  { hanzi:'通过',   pinyin:'tōngguò',    vi:'thông qua, vượt qua',pos:'v',
+    ex:'他通过了HSK四级考试。', exVi:'Anh ấy đã vượt qua kỳ thi HSK cấp 4.' },
+  { hanzi:'篇',     pinyin:'piān',       vi:'bài (lượng từ bài văn)',pos:'m',
+    ex:'他写了一篇文章。', exVi:'Anh ấy viết một bài văn.' },
+  { hanzi:'作家',   pinyin:'zuòjiā',     vi:'nhà văn',           pos:'n',
+    ex:'她是一位著名的作家。', exVi:'Cô ấy là một nhà văn nổi tiếng.' },
+  { hanzi:'当时',   pinyin:'dāngshí',    vi:'lúc đó, hồi đó',   pos:'n',
+    ex:'当时我们都很年轻。', exVi:'Hồi đó chúng tôi đều còn rất trẻ.' },
+  { hanzi:'可是',   pinyin:'kěshì',      vi:'nhưng, tuy nhiên', pos:'conj',
+    ex:'我想去，可是没有时间。', exVi:'Tôi muốn đi nhưng không có thời gian.' },
+  { hanzi:'正确',   pinyin:'zhèngquè',   vi:'chính xác, đúng đắn',pos:'adj',
+    ex:'你的答案是正确的。', exVi:'Câu trả lời của bạn là chính xác.' },
+  { hanzi:'理想',   pinyin:'lǐxiǎng',    vi:'lý tưởng, ước mơ', pos:'n',
+    ex:'我的理想是成为医生。', exVi:'Lý tưởng của tôi là trở thành bác sĩ.' },
+  { hanzi:'勇敢',   pinyin:'yǒnggǎn',    vi:'dũng cảm',          pos:'adj',
+    ex:'她非常勇敢地面对困难。', exVi:'Cô ấy rất dũng cảm đối mặt với khó khăn.' },
+  { hanzi:'结果',   pinyin:'jiéguǒ',     vi:'kết quả',           pos:'n',
+    ex:'考试结果出来了。', exVi:'Kết quả thi đã ra rồi.' },
+  { hanzi:'失败',   pinyin:'shībài',     vi:'thất bại',          pos:'v',
+    ex:'失败是成功之母。', exVi:'Thất bại là mẹ của thành công.' },
+  { hanzi:'过程',   pinyin:'guòchéng',   vi:'quá trình',         pos:'n',
+    ex:'学习的过程很重要。', exVi:'Quá trình học tập rất quan trọng.' },
+  { hanzi:'至少',   pinyin:'zhìshǎo',    vi:'ít nhất',           pos:'adv',
+    ex:'你至少要喝八杯水。', exVi:'Bạn cần uống ít nhất tám ly nước.' },
+  { hanzi:'总结',   pinyin:'zǒngjié',    vi:'tổng kết, tóm tắt', pos:'v',
+    ex:'老师总结了今天的内容。', exVi:'Giáo viên đã tổng kết nội dung hôm nay.' },
+  { hanzi:'取',     pinyin:'qǔ',         vi:'lấy, lấy về',       pos:'v',
+    ex:'我去取快递。', exVi:'Tôi đi lấy hàng chuyển phát.' },
+  { hanzi:'经历',   pinyin:'jīnglì',     vi:'kinh nghiệm, trải nghiệm',pos:'n',
+    ex:'这段经历让我成长很多。', exVi:'Trải nghiệm này giúp tôi trưởng thành nhiều.' },
+  { hanzi:'许多',   pinyin:'xǔduō',      vi:'rất nhiều',         pos:'adj',
+    ex:'他有许多朋友。', exVi:'Anh ấy có rất nhiều bạn bè.' },
+  { hanzi:'区别',   pinyin:'qūbié',      vi:'sự khác biệt',      pos:'n',
+    ex:'这两个词有什么区别？', exVi:'Hai từ này có sự khác biệt gì?' },
+  { hanzi:'暂时',   pinyin:'zànshí',     vi:'tạm thời',          pos:'adv',
+    ex:'这只是暂时的困难。', exVi:'Đây chỉ là khó khăn tạm thời.' },
+  { hanzi:'面对',   pinyin:'miànduì',    vi:'đối mặt với',       pos:'v',
+    ex:'我们要勇敢面对挑战。', exVi:'Chúng ta phải dũng cảm đối mặt với thách thức.' },
+  { hanzi:'经过',   pinyin:'jīngguò',    vi:'trải qua, đi qua', pos:'v',
+    ex:'经过努力，他终于成功了。', exVi:'Sau khi nỗ lực, cuối cùng anh ấy đã thành công.' },
+];
+
+const POS_MAP = { n:'Danh từ', v:'Động từ', adj:'Tính từ', adv:'Phó từ', m:'Lượng từ', conj:'Liên từ' };
+
+/* ══════════════════════════════════════════
+   RENDER VOCAB
+══════════════════════════════════════════ */
+function renderVocab(list) {
+  const g = document.getElementById('vocabGrid');
+  document.getElementById('vocabCount').textContent = `${list.length} từ vựng`;
+  g.innerHTML = list.map((v, i) => `
+    <div class="vocab-card" style="animation-delay:${i*.03}s">
+      <div class="vc-hanzi">${v.hanzi}</div>
+      <div class="vc-pinyin">${v.pinyin}</div>
+      <div class="vc-vi">🇻🇳 ${v.vi}</div>
+      <span class="vc-pos pos-${v.pos}">${POS_MAP[v.pos]||v.pos}</span>
+      <div class="vc-ex">
+        <div class="zh">💬 ${v.ex}</div>
+        <div style="margin-top:3px">${v.exVi}</div>
+      </div>
+    </div>
+  `).join('');
+}
+
+function filterVocab(q) {
+  const s = q.trim().toLowerCase();
+  const list = s ? VOCAB.filter(v =>
+    v.hanzi.includes(s) || v.pinyin.toLowerCase().includes(s) || v.vi.toLowerCase().includes(s)
+  ) : VOCAB;
+  renderVocab(list);
+}
+
+/* ══════════════════════════════════════════
+   TABS
+══════════════════════════════════════════ */
+function switchTab(id, btn) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
+}
+
+/* ══════════════════════════════════════════
+   QUIZ ENGINE
+══════════════════════════════════════════ */
+let questions=[], answers={}, timer=null, timeLeft=0;
+
+const shuffle = a => [...a].sort(()=>Math.random()-.5);
+const pick    = (a,n) => shuffle(a).slice(0,n);
+const excl    = (arr, ex, n=3) => pick(arr.filter(x=>!ex.includes(x)), n);
+
+/* generators */
+function gMC(v) {
+  const opts = shuffle([v.vi, ...excl(VOCAB.map(x=>x.vi),[v.vi])]);
+  return { type:'mc', tag:'Trắc nghiệm', tagCls:'tg-mc',
+    q:`<span style="font-family:'Noto Sans SC',serif;font-size:1.4em;font-weight:900">${v.hanzi}</span>  (${v.pinyin}) có nghĩa là gì?`,
+    opts, correct:v.vi };
+}
+function gMC_zh(v) {
+  const opts = shuffle([v.hanzi, ...excl(VOCAB.map(x=>x.hanzi),[v.hanzi])]);
+  return { type:'mc_zh', tag:'Chọn chữ Hán', tagCls:'tg-mc',
+    q:`Từ tiếng Trung nào có nghĩa là <strong>"${v.vi}"</strong>?`,
+    opts, correct:v.hanzi, zhOpts:true };
+}
+function gFill(v) {
+  const masked = v.ex.replace(new RegExp(v.hanzi.charAt(0),''), '____');
+  return { type:'fill', tag:'Điền vào chỗ trống', tagCls:'tg-fill',
+    q:`Điền từ thích hợp:<br><span style="font-family:'Noto Sans SC',sans-serif">${masked}</span><br><small style="color:var(--muted);font-size:.78rem">${v.exVi}</small>`,
+    correct:v.hanzi };
+}
+function gTransVN(v) {
+  return { type:'fill', tag:'Dịch Việt → Trung', tagCls:'tg-trans',
+    q:`Dịch sang tiếng Trung:<br><strong style="font-size:1.05em">"${v.vi}"</strong>`,
+    correct:v.hanzi, hint:`Pinyin: ${v.pinyin}` };
+}
+function gTransZH(v) {
+  return { type:'fill', tag:'Dịch Trung → Việt', tagCls:'tg-trans',
+    q:`Dịch sang tiếng Việt:<br><span style="font-family:'Noto Sans SC',serif;font-size:1.4em;font-weight:700">${v.hanzi}</span>`,
+    correct:v.vi };
+}
+
+function buildQuestions() {
+  const pool = shuffle(VOCAB);
+  const qs = [];
+  const gens = [gMC, gMC_zh, gFill, gTransVN, gTransZH];
+  gens.forEach((fn, ti) => {
+    const vocs = pool.slice(ti*4, ti*4+4);
+    vocs.forEach(v => qs.push(fn(v)));
+  });
+  return shuffle(qs);
+}
+
+/* timer */
+function startTimer() {
+  timeLeft = 15*60;
+  updateTimer();
+  clearInterval(timer);
+  timer = setInterval(()=>{
+    timeLeft--;
+    updateTimer();
+    if(timeLeft<=60) document.getElementById('timerBox').classList.add('warn');
+    if(timeLeft<=0){ clearInterval(timer); submitQuiz(); }
+  },1000);
+}
+function updateTimer(){
+  const m=String(Math.floor(timeLeft/60)).padStart(2,'0');
+  const s=String(timeLeft%60).padStart(2,'0');
+  document.getElementById('timerTxt').textContent=`${m}:${s}`;
+}
+
+/* start */
+function startQuiz(){
+  questions=buildQuestions(); answers={};
+  document.getElementById('quizStart').style.display='none';
+  document.getElementById('quizResult').style.display='none';
+  document.getElementById('quizMain').style.display='block';
+  document.getElementById('liveScore').textContent='0';
+  updateProg();
+  renderQs();
+  startTimer();
+}
+
+function renderQs(){
+  document.getElementById('qContainer').innerHTML=
+    questions.map((q,i)=>renderOneQ(q,i)).join('');
+}
+
+function renderOneQ(q,i){
+  let body='';
+  if(q.type==='mc'||q.type==='mc_zh'){
+    const st = q.zhOpts?`font-family:'Noto Sans SC',sans-serif;font-size:1.05em`:'';
+    body=`<div class="opts">${q.opts.map(o=>
+      `<button class="opt" style="${st}" onclick="pickMC(${i},this,'${esc(o)}','${esc(q.correct)}')">${o}</button>`
+    ).join('')}</div>`;
+  } else {
+    const hint = q.hint?`<div class="fill-hint">💡 ${q.hint}</div>`:'';
+    body=`${hint}<input class="fill-inp" id="fi-${i}" placeholder="Nhập câu trả lời…"
+      onkeydown="if(event.key==='Enter')checkFill(${i},'${esc(q.correct)}')">`;
+  }
+  return `<div class="qcard" id="qc-${i}">
+    <div class="q-meta">
+      <span class="q-num">Câu ${i+1}</span>
+      <span class="q-tag ${q.tagCls}">${q.tag}</span>
+    </div>
+    <div class="q-body">${q.q}</div>
+    ${body}
+    <div class="fb" id="fb-${i}"></div>
+  </div>`;
+}
+
+const esc = s => s.replace(/'/g,"\\'").replace(/"/g,'&quot;');
+
+function pickMC(qi,btn,chosen,correct){
+  if(answers[qi]!==undefined)return;
+  answers[qi]=chosen===correct?1:0;
+  btn.closest('.opts').querySelectorAll('.opt').forEach(b=>{
+    b.disabled=true;
+    if(b.textContent.trim()===correct) b.classList.add('correct');
+  });
+  if(chosen!==correct) btn.classList.add('wrong');
+  showFB(qi,chosen===correct,correct);
+}
+
+function checkFill(qi,correct){
+  const inp=document.getElementById(`fi-${qi}`);
+  if(answers[qi]!==undefined)return;
+  const v=inp.value.trim();
+  const ok=v===correct||norm(v)===norm(correct);
+  answers[qi]=ok?1:0;
+  inp.disabled=true; inp.classList.add(ok?'correct':'wrong');
+  showFB(qi,ok,correct);
+}
+
+const norm=s=>s.toLowerCase().replace(/\s+/g,'');
+
+function showFB(qi,ok,correct){
+  const score=Object.values(answers).reduce((a,b)=>a+b,0);
+  document.getElementById('liveScore').textContent=score;
+  const fb=document.getElementById(`fb-${qi}`);
+  if(ok){ fb.className='fb ok'; fb.textContent='✅ Chính xác!'; }
+  else  { fb.className='fb err'; fb.innerHTML=`❌ Sai! Đáp án đúng: <strong style="font-family:'Noto Sans SC',sans-serif">${correct}</strong>`; }
+  updateProg();
+}
+
+function updateProg(){
+  const done=Object.keys(answers).length;
+  document.getElementById('progLbl').textContent=`Câu ${done} / ${questions.length}`;
+  document.getElementById('progFill').style.width=`${done/questions.length*100}%`;
+}
+
+function submitQuiz(){
+  clearInterval(timer);
+  questions.forEach((_,i)=>{ if(answers[i]===undefined) answers[i]=0; });
+  const score=Object.values(answers).reduce((a,b)=>a+b,0);
+  showResult(score);
+}
+
+function showResult(score){
+  document.getElementById('quizMain').style.display='none';
+  const pct=Math.round(score/questions.length*100);
+  const wrong=questions.length-score;
+  const icon=pct>=90?'🏆':pct>=70?'🌟':pct>=50?'💪':'📚';
+  const msg=pct>=90?'Xuất sắc! Bạn nắm vững từ vựng HSK 4!':
+            pct>=70?'Rất tốt! Tiếp tục cố gắng nhé!':
+            pct>=50?'Ổn! Hãy ôn lại phần sai.':'Cần ôn thêm nhiều hơn nhé!';
+
+  const rvHTML=questions.map((q,i)=>{
+    const ok=answers[i]===1;
+    const qTxt=q.q.replace(/<[^>]+>/g,'').trim().slice(0,55)+'…';
+    return `<div class="rv-item ${ok?'ok':'bad'}">
+      <div class="rv-q">${ok?'✅':'❌'} Câu ${i+1}: ${qTxt}</div>
+      ${!ok?`<div class="rv-a">Đáp án đúng: <span class="rv-c">${q.correct}</span></div>`:''}
+    </div>`;
+  }).join('');
+
+  const r=document.getElementById('quizResult');
+  r.style.display='block';
+  r.innerHTML=`<div class="result-wrap">
+    <div class="res-icon">${icon}</div>
+    <div class="res-score">${score}/${questions.length}</div>
+    <div class="res-msg">${pct}% · ${msg}</div>
+    <div class="res-bar">
+      <div class="prog-track" style="height:10px;margin-top:14px">
+        <div class="prog-fill" style="width:${pct}%"></div>
+      </div>
+    </div>
+    <div class="res-grid">
+      <div class="res-stat"><div class="rs-num rs-c">${score}</div><div class="rs-lbl">Đúng</div></div>
+      <div class="res-stat"><div class="rs-num rs-w">${wrong}</div><div class="rs-lbl">Sai</div></div>
+      <div class="res-stat"><div class="rs-num rs-p">${pct}%</div><div class="rs-lbl">Điểm</div></div>
+    </div>
+    <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:6px">
+      <button class="btn btn-p" onclick="startQuiz()">🔄 Làm lại</button>
+      <button class="btn btn-g" onclick="switchTab('vocab',document.querySelectorAll('.tab-btn')[0])">📖 Xem từ vựng</button>
+    </div>
+    <div class="review-section">
+      <h3>Chi tiết kết quả</h3>
+      ${rvHTML}
+    </div>
+  </div>`;
+}
+
+/* init */
+renderVocab(VOCAB);
+</script>
+
+
+</body></html>
